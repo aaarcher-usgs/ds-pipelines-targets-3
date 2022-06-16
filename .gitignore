@@ -5,3 +5,8 @@
 
 # Specific files/dirs to ignore for this pipeline
 */tmp/*
+_targets/*
+*/out/*
+
+# Mac specific
+*.DS_Store

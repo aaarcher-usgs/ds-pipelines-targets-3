@@ -4,8 +4,7 @@ library(tarchetypes)
 library(tibble)
 
 options(tidyverse.quiet = TRUE)
-tar_option_set(packages = c("tidyverse", "dataRetrieval", "urbnmapr", "rnaturalearth", "cowplot",
-                            "tarchetypes", "tibble"))
+tar_option_set(packages = c("tidyverse", "dataRetrieval", "urbnmapr", "rnaturalearth", "cowplot"))
 
 # Load functions needed by targets below
 source("1_fetch/src/find_oldest_sites.R")
@@ -32,19 +31,6 @@ list(
                     state = state_abb,
                     parameter = parameter))
   ),
-    # ),
-    # tar_target(
-    #   count,
-    #   get_site_data(sites_info = oldest_active_sites,
-    #                 state = state_abb,
-    #                 parameter = parameter)
-    # ),
-    # tar_target(
-    #   fig,
-    #   get_site_data(sites_info = oldest_active_sites,
-    #                 state = state_abb,
-    #                 parameter = parameter)
-    # ),
 
 
 

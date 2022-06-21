@@ -30,6 +30,7 @@ list(
   tar_map(
     values = tibble(state_abb = states,
                     state_plot_files = sprintf("3_visualize/out/timeseries_%s.png",state_abb)),
+    names = state_abb,
     tar_target(nwis_inventory,
                oldest_active_sites %>% filter(state_cd == state_abb)),
     tar_target(
@@ -47,8 +48,7 @@ list(
       plot_site_data(out_file = state_plot_files,
                      site_data = nwis_data,
                      parameter = parameter)
-    ),
-    names = state_abb
+    )
   ),
 
 

@@ -11,7 +11,3 @@ tally_site_obs <- function(site_data) {
 }
 
 
-# Combine all the results together
-combine_obs_tallies <- function(...){
-  dplyr::bind_rows(...)
-}
